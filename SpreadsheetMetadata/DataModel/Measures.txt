@@ -1,0 +1,8 @@
+"Name"|"Visible"|"Unique Name"|"Dax Expression"|"Name and Expression"
+"AssumptionValue"|"True"|"[Measures].[AssumptionValue]"|":=IF(
+    HASONEVALUE(Assumptions[Item]),
+    VALUES(Assumptions[Value])
+)"|"AssumptionValue:=IF(
+    HASONEVALUE(Assumptions[Item]),
+    VALUES(Assumptions[Value])
+)"

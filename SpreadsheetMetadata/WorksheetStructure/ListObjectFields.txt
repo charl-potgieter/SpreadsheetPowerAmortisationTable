@@ -1,0 +1,5 @@
+SheetName|ListObjectName|ListObjectHeader|IsFormula|FormulaAmortisation|tbl_Amort|Index|True|=ROW()  - ROW(tbl_Amort[#Headers])Amortisation|tbl_Amort|End Of Month|True|=EOMONTH(FirstMonthEnd, [@Index] - 1)Amortisation|tbl_Amort|Opening Balance|True|=IF(
+    [@Index] = 1,
+    Principal,
+    INDEX([Closing Balance], [@Index] -1)
+)Amortisation|tbl_Amort|Interest|True|=[@[Opening Balance]] * InterestPerMonthAmortisation|tbl_Amort|Payment|True|=PaymentsPerMonthAmortisation|tbl_Amort|Closing Balance|True|=[@[Opening Balance]]+[@Interest]+[@Payment]

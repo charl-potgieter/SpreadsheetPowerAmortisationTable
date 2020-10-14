@@ -1,0 +1,11 @@
+' [Assumptions] is a table
+' [Item] is a column in the table
+' ItemName is an Excel Cell reference.  Cell contains the field as per the Item column in Assumption table
+' [AssumptionValue] is a measure
+
+
+=CUBEVALUE(
+    "ThisWorkbookDataModel",
+    CUBEMEMBER("ThisWorkbookDataModel", "[Assumptions].[Item].&[" & ItemName & "]"),
+    CUBEMEMBER("ThisWorkbookDataModel","[Measures].[AssumptionValue]")
+) * 1

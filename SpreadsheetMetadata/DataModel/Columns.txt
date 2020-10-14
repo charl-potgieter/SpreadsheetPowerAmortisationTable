@@ -1,0 +1,3 @@
+Name|Table Name|Unique Name|Visible
+Item|Assumptions|[Assumptions].[Item]|True
+Value|Assumptions|[Assumptions].[Value]|True
